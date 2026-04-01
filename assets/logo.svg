@@ -1,0 +1,19 @@
+<svg width="520" height="130" viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RG MediaCreates logo">
+    <defs>
+        <style>
+            .headline { font-family: 'Space Grotesk', 'Manrope', 'Segoe UI', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+            .subline { font-family: 'Space Grotesk', 'Manrope', 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: 0.55em; text-transform: uppercase; }
+        </style>
+    </defs>
+    <g fill="#ffffff">
+        <path d="M20 20h60c24 0 40 16 40 35 0 13-9 26-20 30l20 25H92l-16-21H68v21H20V20zm48 52c8 0 14-5 14-11s-6-11-14-11H68v22z"/>
+        <path d="M143 20h49c35 0 63 26 63 55s-28 55-63 55h-49V20zm49 75c12 0 22-9 22-20s-10-20-22-20h-8v40z"/>
+        <text class="headline" font-size="74" x="255" y="78">media</text>
+        <text class="headline" font-size="74" x="255" y="123">Creates</text>
+    </g>
+    <g stroke="#ffffff" stroke-width="3" fill="none">
+        <circle cx="460" cy="48" r="26" stroke-dasharray="8 6"/>
+        <path d="M441 78c8 14 24 24 41 24 9 0 18-2 26-7" opacity="0.6"/>
+        <path d="M475 22l24-6-6 24" fill="#ffffff"/>
+    </g>
+</svg>

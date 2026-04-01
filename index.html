@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RG MediaCreates | Digital Growth Agency</title>
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+        <a class="brand-card" href="#home" aria-label="RG Media Creates home">
+            <img src="assets/rg-header-logo.png" alt="RG Media Creates logo">
+        </a>
+        <nav class="comic-nav" aria-label="Primary">
+            <div class="comic-radio-group" style="--items: 6; --active-index: 0;">
+                <input type="radio" name="site-nav" id="nav-home" checked>
+                <label for="nav-home" data-target="home">Home</label>
+
+                <input type="radio" name="site-nav" id="nav-about">
+                <label for="nav-about" data-target="about">About</label>
+
+                <input type="radio" name="site-nav" id="nav-services">
+                <label for="nav-services" data-target="services">Services</label>
+
+                <input type="radio" name="site-nav" id="nav-why">
+                <label for="nav-why" data-target="why">Why Us</label>
+
+                <input type="radio" name="site-nav" id="nav-insights">
+                <label for="nav-insights" data-target="insights">Insights</label>
+
+                <input type="radio" name="site-nav" id="nav-contact">
+                <label for="nav-contact" data-target="contact">Contact</label>
+
+                <div class="comic-glider" aria-hidden="true"></div>
+            </div>
+        </nav>
+        <a class="galaxy-btn" href="#contact">
+            <span class="galaxy-btn__content">
+                <span class="galaxy-btn__text">Let's Connect</span>
+                <svg
+                    class="galaxy-btn__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                        d="M13 14h-2a8.999 8.999 0 0 0-7.968 4.81A10.136 10.136 0 0 1 3 18C3 12.477 7.477 8 13 8V3l10 8-10 8v-5z"
+                        fill="currentColor"
+                    ></path>
+                </svg>
+            </span>
+            <span class="galaxy-btn__glow"></span>
+            <span class="galaxy-btn__stars"></span>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/hero-logo-reveal.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Global digital acceleration</p>
+                <h1>Elevate Your Brand with <span class="hero-brand">RG MediaCreates</span>.</h1>
+                <p class="hero-copy">We combine creative storytelling with data-driven strategies to help your business get noticed, generate leads, and dominate the digital landscape.</p>
+                <div class="cta-group">
+                    <a class="btn primary" href="#services">Explore Our Services</a>
+                    <a class="btn outline" href="#contact">Let's Connect</a>
+                </div>
+                <div class="hero-metrics">
+                    <div>
+                        <span>12+</span>
+                        <p>Markets activated</p>
+                    </div>
+                    <div>
+                        <span>4.8/5</span>
+                        <p>Average client rating</p>
+                    </div>
+                    <div>
+                        <span>360&deg;</span>
+                        <p>End-to-end delivery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-card">
+                <div class="about-copy">
+                    <p class="eyebrow">About Us</p>
+                    <h2 class="about-headline">We push the edges of visual storytelling.</h2>
+                    <p class="about-body">RG MediaCreates is a full-service digital marketing and media agency dedicated to driving global growth. We don't just provide services; we build digital success stories. From stunning visuals to high-impact campaigns, we create content that connects and converts.</p>
+                </div>
+                <div class="about-visual">
+                    <video class="about-video" src="assets/about-visual.mp4" autoplay muted loop playsinline></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="section-heading">
+                <p class="eyebrow">Core Offerings</p>
+                <h2>Engineered services for brands that want the lead.</h2>
+            </div>
+            <div class="services-stage">
+                <article class="service-feature social-media">
+                    <div class="service-visual">
+                        <span class="service-tag">01 / Social</span>
+                        <div class="service-window service-window-main"></div>
+                        <div class="service-window service-window-accent"></div>
+                    </div>
+                    <div class="service-copy">
+                        <p class="service-kicker">Social Media Marketing</p>
+                        <h3>Scroll-stopping content systems built like campaigns, not posts.</h3>
+                        <p>We turn your social presence into an always-on brand theater with tailored content, platform-native storytelling, and community management that converts attention into demand.</p>
+                    </div>
+                </article>
+                <article class="service-feature seo-strategy">
+                    <div class="service-visual">
+                        <span class="service-tag">02 / Search</span>
+                        <div class="service-noise"></div>
+                        <div class="service-orb"></div>
+                    </div>
+                    <div class="service-copy">
+                        <p class="service-kicker">SEO & Digital Strategy</p>
+                        <h3>Positioning the brand where intent already exists.</h3>
+                        <p>From ranking architecture to demand mapping, we connect search visibility with growth strategy so your business gets discovered at the exact moment customers are ready to act.</p>
+                    </div>
+                </article>
+                <article class="service-feature web-design">
+                    <div class="service-visual">
+                        <span class="service-tag">03 / Web</span>
+                        <div class="service-screen">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="service-copy">
+                        <p class="service-kicker">Website Design & Development</p>
+                        <h3>High-performance digital storefronts with a cinematic first impression.</h3>
+                        <p>We design and build immersive websites that feel premium, load fast, and guide visitors through a clean, conversion-ready experience from first click to final action.</p>
+                    </div>
+                </article>
+                <article class="service-feature paid-ads">
+                    <div class="service-visual">
+                        <span class="service-tag">04 / Paid</span>
+                        <div class="service-beam"></div>
+                        <div class="service-card-mini">ROAS</div>
+                    </div>
+                    <div class="service-copy">
+                        <p class="service-kicker">Paid Ads (PPC)</p>
+                        <h3>Performance media designed for fast testing and sharp scale.</h3>
+                        <p>We launch targeted campaigns across Google, Meta, and LinkedIn with creative testing, precision audience mapping, and budget control that protects ROI while accelerating acquisition.</p>
+                    </div>
+                </article>
+                <article class="service-feature local-seo">
+                    <div class="service-visual">
+                        <span class="service-tag">05 / Local</span>
+                        <div class="service-grid-map"></div>
+                        <div class="service-pin"></div>
+                    </div>
+                    <div class="service-copy">
+                        <p class="service-kicker">Google Maps & Local SEO</p>
+                        <h3>Own the neighborhood before competitors even appear.</h3>
+                        <p>We optimize your listings, reviews, and local landing pages so nearby customers find you first, trust you faster, and convert with less friction.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="why" id="why">
+            <div class="section-heading">
+                <p class="eyebrow">The Extraordinary Edge</p>
+                <h2>Why brands switch to <span class="why-brand">RG MediaCreates</span>.</h2>
+            </div>
+            <div class="why-grid container">
+                <div class="glass">
+                    <h3>Strategy-First Approach</h3>
+                    <p>Launch moments only happen once. We orchestrate every touchpoint backed by research and experimentation.</p>
+                </div>
+                <div class="glass">
+                    <h3>Data-Driven Results</h3>
+                    <p>Attribution, cohort views, sentiment mapping-data tells us what stays, scales, or stops.</p>
+                </div>
+                <div class="glass">
+                    <h3>End-to-End Digital Expertise</h3>
+                    <p>One partner for creative, media, automation, and analytics. Less friction, more momentum.</p>
+                </div>
+                <div class="glass">
+                    <h3>Creative Excellence</h3>
+                    <p>In-house media production and post fx deliver cinematic polish to every campaign asset.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact" aria-label="Key performance callouts">
+            <div class="impact-card" data-counter data-target="134" data-suffix="+">
+                <p class="eyebrow">Lead Generation</p>
+                <div class="impact-value">
+                    <span class="counter-value">0</span>
+                    <p>Leads Generated</p>
+                </div>
+                <p class="small">Automated nurture sequences turn intent into booked revenue.</p>
+            </div>
+            <div class="impact-card">
+                <p class="eyebrow">Campaign Velocity</p>
+                <h3>Launch-ready in <span>21 days</span></h3>
+                <p class="small">Modular content systems keep sprints short and responsive.</p>
+            </div>
+            <div class="impact-card">
+                <p class="eyebrow">Experience Layer</p>
+                <h3>3D + XR Production</h3>
+                <p class="small">Interactive renders and volumetric lighting create immersive, premium storytelling.</p>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="testimonials-intro">
+                <div class="section-heading">
+                    <p class="eyebrow">Client Testimonials</p>
+                    <h2>Companies that trust RG MediaCreates.</h2>
+                </div>
+                <div class="testimonial-lead">
+                    <span class="quote-mark">&ldquo;</span>
+                    <p>The results speak for themselves. These are some of the opinions of brands who trusted us and saw how our digital strategy, media production, and growth systems helped their business move faster.</p>
+                </div>
+            </div>
+            <div class="slider" data-slider>
+                <button class="slider-btn" data-direction="prev" aria-label="Previous testimonial">&#8592;</button>
+                <div class="slides-viewport">
+                    <div class="slides">
+                        <article class="testimonial is-active">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">PS</span>
+                                    <div class="review-meta">
+                                        <p>Priya Sharma</p>
+                                        <span>2 weeks ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">RG MediaCreates rebuilt our launch story with cinematic assets and an automated lead engine. We closed 100+ enterprise demos in two quarters.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                        <article class="testimonial">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">MA</span>
+                                    <div class="review-meta">
+                                        <p>Mateo Alvarez</p>
+                                        <span>1 month ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">The team plugged into our data stack, reworked SEO, and shipped a frictionless site. We now rank number one across five mission-critical keywords.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                        <article class="testimonial">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">NC</span>
+                                    <div class="review-meta">
+                                        <p>Naomi Carter</p>
+                                        <span>4 months ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">Paid media plus on-brand storytelling turned our social feeds into a predictable pipeline. Their reports read like product roadmaps for growth.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                        <article class="testimonial">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">RK</span>
+                                    <div class="review-meta">
+                                        <p>Rohan Kapoor</p>
+                                        <span>6 months ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">From website launch to local SEO cleanup, the team handled everything with clarity and speed. We saw better leads and a much stronger brand presence.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                        <article class="testimonial">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">AK</span>
+                                    <div class="review-meta">
+                                        <p>Anika Khanna</p>
+                                        <span>3 months ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">Their team understood the brand quickly, elevated our creatives, and gave us a smarter performance funnel. The campaign quality felt premium from day one.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                        <article class="testimonial">
+                            <div class="review-top">
+                                <div class="review-person">
+                                    <span class="review-avatar">DS</span>
+                                    <div class="review-meta">
+                                        <p>Dev Sethi</p>
+                                        <span>5 months ago</span>
+                                    </div>
+                                </div>
+                                <span class="review-platform">G</span>
+                            </div>
+                            <p class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="quote">We needed a faster digital rollout with better local visibility, and RG MediaCreates delivered both. The communication was sharp and the execution was even better.</p>
+                            <a href="#contact" class="review-link">Read more</a>
+                        </article>
+                    </div>
+                </div>
+                <button class="slider-btn" data-direction="next" aria-label="Next testimonial">&#8594;</button>
+            </div>
+            <div class="slider-dots" role="tablist">
+                <button class="dot is-active" aria-label="Show testimonial 1" data-index="0"></button>
+                <button class="dot" aria-label="Show testimonial 2" data-index="1"></button>
+                <button class="dot" aria-label="Show testimonial 3" data-index="2"></button>
+                <button class="dot" aria-label="Show testimonial 4" data-index="3"></button>
+                <button class="dot" aria-label="Show testimonial 5" data-index="4"></button>
+                <button class="dot" aria-label="Show testimonial 6" data-index="5"></button>
+            </div>
+        </section>
+
+        <section class="insights" id="insights">
+            <div class="section-heading">
+                <p class="eyebrow">Featured Insights</p>
+                <h2>Ideas powering our next campaigns.</h2>
+            </div>
+            <div class="insights-grid">
+                <article>
+                    <p class="tag">Strategy</p>
+                    <h3>Designing demand engines around dark social.</h3>
+                    <p>How community-led media buys are surfacing intent 3x faster than traditional funnels.</p>
+                    <a href="#">Read the breakdown &rarr;</a>
+                </article>
+                <article>
+                    <p class="tag">Creative</p>
+                    <h3>3D-first content for product-led brands.</h3>
+                    <p>Subtle cinematic moves and spatial audio cues to keep viewers watching past the hook.</p>
+                    <a href="#">See the playbook &rarr;</a>
+                </article>
+                <article>
+                    <p class="tag">SEO</p>
+                    <h3>Owning local search with trust signals.</h3>
+                    <p>Schema layering, review ops, and neighborhood-specific landing pages that convert.</p>
+                    <a href="#">Learn the signals &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-heading contact-heading">
+                <p class="eyebrow">Let's Build</p>
+                <h2>Ready to turn attention into <span class="contact-brand-accent">real growth</span>?</h2>
+            </div>
+            <div class="contact-shell">
+                <div class="contact-brand">
+                    <img src="assets/rg-strip.png" alt="RG MediaCreates logo" class="contact-mark">
+                    <p class="contact-copy">RG MediaCreates builds cinematic creative, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and convert better.</p>
+                    <div class="contact-socials" aria-label="Social links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <p class="contact-links-title">Quick Links</p>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#why">Why Us</a>
+                    <a href="#insights">Insights</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <form class="contact-form">
+                    <label class="contact-field contact-field-full">
+                        <span>Name</span>
+                        <input type="text" placeholder="Name" required>
+                    </label>
+                    <label class="contact-field">
+                        <span>Phone Number</span>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </label>
+                    <label class="contact-field">
+                        <span>Email Address</span>
+                        <input type="email" placeholder="Email Address" required>
+                    </label>
+                    <label class="contact-field contact-field-full">
+                        <span>Message</span>
+                        <textarea rows="7" placeholder="Message"></textarea>
+                    </label>
+                    <button class="contact-submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Designed and Developed by RG MediaCreates</p>
+        <p>&copy; <span id="year"></span> RG MediaCreates. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
