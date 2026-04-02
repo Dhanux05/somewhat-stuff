@@ -12,6 +12,29 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="site-background" aria-hidden="true">
+        <span class="site-background__mesh"></span>
+        <span class="site-background__orb site-background__orb--one"></span>
+        <span class="site-background__orb site-background__orb--two"></span>
+        <span class="site-background__orb site-background__orb--three"></span>
+        <span class="site-background__glow"></span>
+        <span class="site-background__ring site-background__ring--one"></span>
+        <span class="site-background__ring site-background__ring--two"></span>
+        <span class="site-background__particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <span class="site-background__line site-background__line--one"></span>
+        <span class="site-background__line site-background__line--two"></span>
+    </div>
     <div class="noise" aria-hidden="true"></div>
     <header class="site-header">
         <a class="brand-card" href="#home" aria-label="RG Media Creates home">
@@ -446,41 +469,45 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <div class="section-heading contact-heading" data-scroll="section-title">
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <section class="contact">
+            <div class="section-heading contact-heading footer-contact-heading">
                 <p class="eyebrow">Let's Build</p>
-                <h2>Ready to turn attention into <span class="contact-brand-accent">real growth</span>?</h2>
+                <h2>Ready to grow with <span class="contact-brand-accent">RG MediaCreates</span>?</h2>
+                <p class="footer-contact-lead">Use the footer to explore the site, connect with us, or send your brief directly.</p>
             </div>
             <div class="contact-shell">
-                <div class="contact-brand" data-scroll="slide-left">
+                <div class="contact-brand">
                     <p class="contact-brand-kicker">Creative Growth Partner</p>
-                    <img src="assets/rg-header-logo.png" alt="RG MediaCreates logo" class="contact-mark">
-                    <p class="contact-copy">
-                        RG MediaCreates builds <span>cinematic creative</span>, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and <span>convert better</span>.
-                    </p>
+                    <div class="contact-mark-shell">
+                        <img src="assets/rg-header-logo.png" alt="RG MediaCreates logo" class="contact-mark">
+                    </div>
+                    <p class="contact-copy">RG MediaCreates builds <span>cinematic creative</span>, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and <span>convert better</span>.</p>
                     <div class="contact-socials" aria-label="Social links">
-                        <a href="#" aria-label="Instagram" class="social-link social-link-instagram">
+                        <a href="#" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <rect x="4.5" y="4.5" width="15" height="15" rx="4"></rect>
                                 <circle cx="12" cy="12" r="3.6"></circle>
                                 <circle cx="17.2" cy="6.8" r="1.05" class="social-dot"></circle>
                             </svg>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="social-link social-link-linkedin">
+                        <a href="#" aria-label="LinkedIn">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <rect x="4.4" y="8.8" width="3.1" height="10.2" rx="1"></rect>
                                 <circle cx="5.95" cy="5.9" r="1.55"></circle>
                                 <path d="M10.3 8.8h3v1.45c.68-1.06 1.95-1.8 3.76-1.8 3.15 0 4.51 2.02 4.51 5.34V19h-3.24v-4.63c0-1.92-.68-3.02-2.26-3.02-1.72 0-2.76 1.16-2.76 3.02V19H10.3z"></path>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Facebook" class="social-link social-link-facebook">
+                        <a href="#" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M13.4 20v-7.03h2.38l.36-2.75H13.4V8.46c0-.8.22-1.34 1.37-1.34h1.46V4.66c-.25-.03-1.1-.11-2.09-.11-2.06 0-3.47 1.26-3.47 3.57v2.1H8.33v2.75h2.34V20z"></path>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="contact-links" data-scroll="fade-up" data-delay="0.08s">
+                <div class="contact-links">
                     <p class="contact-links-title">Quick Links</p>
                     <a href="#about">About Us</a>
                     <a href="#services">Services</a>
@@ -489,7 +516,7 @@
                     <a href="#testimonials">Testimonials</a>
                     <a href="#contact">Contact Us</a>
                 </div>
-                <form class="contact-form" data-scroll="slide-right" data-delay="0.14s">
+                <form class="contact-form">
                     <label class="contact-field contact-field-full">
                         <span>Name</span>
                         <input type="text" placeholder="Name" required>
@@ -510,14 +537,13 @@
                 </form>
             </div>
         </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>Designed and Developed by RG MediaCreates</p>
-        <p>&copy; <span id="year"></span> RG MediaCreates. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
+        <div class="footer-meta">
+            <p>Designed and Developed by RG MediaCreates</p>
+            <p>&copy; <span id="year"></span> RG MediaCreates. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
         </div>
     </footer>
 </body>
