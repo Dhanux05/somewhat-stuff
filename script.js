@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', () => {
     const yearEl = document.getElementById('year');
     if (yearEl) {
@@ -43,14 +45,71 @@ document.addEventListener('DOMContentLoaded', () => {
         counterItems.forEach(item => observer.observe(item));
     }
 
+    const scrollItems = document.querySelectorAll('[data-scroll]');
+    if (scrollItems.length) {
+        scrollItems.forEach(item => {
+            if (item.dataset.delay) {
+                item.style.setProperty('--scroll-delay', item.dataset.delay);
+            }
+        });
+
+        const scrollObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        scrollItems.forEach(item => scrollObserver.observe(item));
+    }
+
+    const insightCards = document.querySelectorAll('.insight-card');
+    if (insightCards.length) {
+        const revealInsightCard = card => {
+            card.classList.add('is-animated');
+        };
+
+        const insightObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    revealInsightCard(entry.target);
+                    insightObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.35,
+            rootMargin: '0px 0px -8% 0px'
+        });
+
+        insightCards.forEach(card => insightObserver.observe(card));
+    }
+
     const comicNav = document.querySelector('.comic-radio-group');
     const navInputs = comicNav?.querySelectorAll('input[type="radio"]');
     const navLabels = comicNav?.querySelectorAll('label[data-target]');
+    const siteHeader = document.querySelector('.site-header');
 
     if (comicNav && navInputs?.length && navLabels?.length) {
         const setActiveNav = index => {
             comicNav.style.setProperty('--active-index', index);
             navInputs[index].checked = true;
+        };
+
+        const getHeaderOffset = () => (siteHeader?.offsetHeight || 0) + 18;
+
+        const scrollToSection = section => {
+            if (!section) return;
+
+            const targetTop = window.scrollY + section.getBoundingClientRect().top - getHeaderOffset();
+            window.scrollTo({
+                top: Math.max(targetTop, 0),
+                behavior: 'smooth'
+            });
         };
 
         navLabels.forEach((label, index) => {
@@ -59,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sectionId = label.dataset.target;
                 const section = document.getElementById(sectionId);
                 setActiveNav(index);
-                section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                scrollToSection(section);
             });
         });
 
@@ -71,21 +130,22 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(item => item.element);
 
         if (navSections.length) {
-            const navObserver = new IntersectionObserver(entries => {
-                const visibleEntry = entries
-                    .filter(entry => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            const updateActiveNavFromScroll = () => {
+                const scrollMarker = window.scrollY + getHeaderOffset() + 24;
+                let activeIndex = navSections[0].index;
 
-                if (!visibleEntry) return;
+                navSections.forEach(item => {
+                    if (item.element.offsetTop <= scrollMarker) {
+                        activeIndex = item.index;
+                    }
+                });
 
-                const match = navSections.find(item => item.element === visibleEntry.target);
-                if (match) setActiveNav(match.index);
-            }, {
-                threshold: [0.35, 0.55, 0.75],
-                rootMargin: '-20% 0px -45% 0px'
-            });
+                setActiveNav(activeIndex);
+            };
 
-            navSections.forEach(item => navObserver.observe(item.element));
+            updateActiveNavFromScroll();
+            window.addEventListener('scroll', updateActiveNavFromScroll, { passive: true });
+            window.addEventListener('resize', updateActiveNavFromScroll);
         }
     }
 
@@ -154,10 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const whyCards = document.querySelectorAll('.why .glass');
     if (whyCards.length) {
         whyCards.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add('show');
-            }, index * 200);
-
             card.addEventListener('mousemove', event => {
                 const rect = card.getBoundingClientRect();
                 const x = event.clientX - rect.left;

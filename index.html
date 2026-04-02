@@ -69,8 +69,8 @@
                 <source src="assets/hero-logo-reveal.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay" aria-hidden="true"></div>
-            <div class="hero-content">
-                <p class="eyebrow">Global digital acceleration</p>
+            <div class="hero-content" data-scroll="hero">
+                <p class="eyebrow">Digital Marketing Solutions</p>
                 <h1>Elevate Your Brand with <span class="hero-brand">RG MediaCreates</span>.</h1>
                 <p class="hero-copy">We combine creative storytelling with data-driven strategies to help your business get noticed, generate leads, and dominate the digital landscape.</p>
                 <div class="cta-group">
@@ -96,28 +96,31 @@
 
         <section class="about" id="about">
             <div class="about-card">
-                <div class="about-copy">
+                <div class="about-copy reveal-left" data-scroll="slide-left">
                     <p class="eyebrow">About Us</p>
                     <h2 class="about-headline">We push the edges of visual storytelling.</h2>
                     <p class="about-body">RG MediaCreates is a full-service digital marketing and media agency dedicated to driving global growth. We don't just provide services; we build digital success stories. From stunning visuals to high-impact campaigns, we create content that connects and converts.</p>
                 </div>
-                <div class="about-visual">
+                <div class="about-visual reveal-right" data-scroll="zoom-right" data-delay="0.12s">
                     <video class="about-video" src="assets/about-visual.mp4" autoplay muted loop playsinline></video>
                 </div>
             </div>
         </section>
 
         <section class="services" id="services">
-            <div class="section-heading">
+            <div class="section-heading" data-scroll="section-title">
                 <p class="eyebrow">Core Offerings</p>
-                <h2>Engineered services for brands that want the lead.</h2>
+                <h2>Engineered <span class="services-highlight">services</span> for brands that want the lead.</h2>
             </div>
             <div class="services-stage">
-                <article class="service-feature social-media">
+                <article class="service-feature social-media" data-scroll="service-left">
                     <div class="service-visual">
                         <span class="service-tag">01 / Social</span>
-                        <div class="service-window service-window-main"></div>
-                        <div class="service-window service-window-accent"></div>
+                        <img
+                            class="service-media-image"
+                            src="assets/social-media-service.png"
+                            alt="Social media marketing illustration with platform icons"
+                        >
                     </div>
                     <div class="service-copy">
                         <p class="service-kicker">Social Media Marketing</p>
@@ -125,11 +128,14 @@
                         <p>We turn your social presence into an always-on brand theater with tailored content, platform-native storytelling, and community management that converts attention into demand.</p>
                     </div>
                 </article>
-                <article class="service-feature seo-strategy">
+                <article class="service-feature seo-strategy" data-scroll="service-right" data-delay="0.06s">
                     <div class="service-visual">
                         <span class="service-tag">02 / Search</span>
-                        <div class="service-noise"></div>
-                        <div class="service-orb"></div>
+                        <img
+                            class="service-media-image"
+                            src="assets/seo-service-banner.avif"
+                            alt="SEO optimization dashboard illustration"
+                        >
                     </div>
                     <div class="service-copy">
                         <p class="service-kicker">SEO & Digital Strategy</p>
@@ -137,14 +143,14 @@
                         <p>From ranking architecture to demand mapping, we connect search visibility with growth strategy so your business gets discovered at the exact moment customers are ready to act.</p>
                     </div>
                 </article>
-                <article class="service-feature web-design">
+                <article class="service-feature web-design" data-scroll="service-left" data-delay="0.12s">
                     <div class="service-visual">
                         <span class="service-tag">03 / Web</span>
-                        <div class="service-screen">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                        <img
+                            class="service-media-image"
+                            src="assets/web-development-service.jpg"
+                            alt="Web development service illustration with digital interface icons"
+                        >
                     </div>
                     <div class="service-copy">
                         <p class="service-kicker">Website Design & Development</p>
@@ -152,11 +158,14 @@
                         <p>We design and build immersive websites that feel premium, load fast, and guide visitors through a clean, conversion-ready experience from first click to final action.</p>
                     </div>
                 </article>
-                <article class="service-feature paid-ads">
+                <article class="service-feature paid-ads" data-scroll="service-right" data-delay="0.18s">
                     <div class="service-visual">
                         <span class="service-tag">04 / Paid</span>
-                        <div class="service-beam"></div>
-                        <div class="service-card-mini">ROAS</div>
+                        <img
+                            class="service-media-image"
+                            src="assets/pay-per-click.png"
+                            alt="Pay per click advertising illustration with digital ad panels and a clicking hand"
+                        >
                     </div>
                     <div class="service-copy">
                         <p class="service-kicker">Paid Ads (PPC)</p>
@@ -164,11 +173,14 @@
                         <p>We launch targeted campaigns across Google, Meta, and LinkedIn with creative testing, precision audience mapping, and budget control that protects ROI while accelerating acquisition.</p>
                     </div>
                 </article>
-                <article class="service-feature local-seo">
+                <article class="service-feature local-seo" data-scroll="service-left" data-delay="0.24s">
                     <div class="service-visual">
                         <span class="service-tag">05 / Local</span>
-                        <div class="service-grid-map"></div>
-                        <div class="service-pin"></div>
+                        <img
+                            class="service-media-image"
+                            src="assets/google-maps-in-search-engine-ranking-500x500.webp"
+                            alt="Local SEO and Google Map optimization image with a red pin on a street map"
+                        >
                     </div>
                     <div class="service-copy">
                         <p class="service-kicker">Google Maps & Local SEO</p>
@@ -180,24 +192,45 @@
         </section>
 
         <section class="why" id="why">
-            <div class="section-heading">
+            <div class="section-heading" data-scroll="section-title">
                 <p class="eyebrow">The Extraordinary Edge</p>
                 <h2>Why brands switch to <span class="why-brand">RG MediaCreates</span>.</h2>
             </div>
             <div class="why-grid container">
-                <div class="glass">
+                <div class="glass why-card-strategy" data-scroll="flip-up">
+                    <div class="why-visual why-visual-strategy" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <h3>Strategy-First Approach</h3>
                     <p>Launch moments only happen once. We orchestrate every touchpoint backed by research and experimentation.</p>
                 </div>
-                <div class="glass">
+                <div class="glass why-card-data" data-scroll="tilt-left" data-delay="0.08s">
+                    <div class="why-visual why-visual-data" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <h3>Data-Driven Results</h3>
                     <p>Attribution, cohort views, sentiment mapping-data tells us what stays, scales, or stops.</p>
                 </div>
-                <div class="glass">
+                <div class="glass why-card-stack" data-scroll="tilt-right" data-delay="0.16s">
+                    <div class="why-visual why-visual-stack" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <h3>End-to-End Digital Expertise</h3>
                     <p>One partner for creative, media, automation, and analytics. Less friction, more momentum.</p>
                 </div>
-                <div class="glass">
+                <div class="glass why-card-creative" data-scroll="flip-up" data-delay="0.24s">
+                    <div class="why-visual why-visual-creative" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <h3>Creative Excellence</h3>
                     <p>In-house media production and post fx deliver cinematic polish to every campaign asset.</p>
                 </div>
@@ -205,7 +238,7 @@
         </section>
 
         <section class="impact" aria-label="Key performance callouts">
-            <div class="impact-card" data-counter data-target="134" data-suffix="+">
+            <div class="impact-card" data-counter data-target="134" data-suffix="+" data-scroll="rise-card">
                 <p class="eyebrow">Lead Generation</p>
                 <div class="impact-value">
                     <span class="counter-value">0</span>
@@ -213,12 +246,12 @@
                 </div>
                 <p class="small">Automated nurture sequences turn intent into booked revenue.</p>
             </div>
-            <div class="impact-card">
+            <div class="impact-card" data-scroll="rise-card" data-delay="0.1s">
                 <p class="eyebrow">Campaign Velocity</p>
                 <h3>Launch-ready in <span>21 days</span></h3>
                 <p class="small">Modular content systems keep sprints short and responsive.</p>
             </div>
-            <div class="impact-card">
+            <div class="impact-card" data-scroll="rise-card" data-delay="0.2s">
                 <p class="eyebrow">Experience Layer</p>
                 <h3>3D + XR Production</h3>
                 <p class="small">Interactive renders and volumetric lighting create immersive, premium storytelling.</p>
@@ -227,11 +260,11 @@
 
         <section class="testimonials" id="testimonials">
             <div class="testimonials-intro">
-                <div class="section-heading">
+                <div class="section-heading" data-scroll="section-title">
                     <p class="eyebrow">Client Testimonials</p>
                     <h2>Companies that trust RG MediaCreates.</h2>
                 </div>
-                <div class="testimonial-lead">
+                <div class="testimonial-lead" data-scroll="fade-up" data-delay="0.08s">
                     <span class="quote-mark">&ldquo;</span>
                     <p>The results speak for themselves. These are some of the opinions of brands who trusted us and saw how our digital strategy, media production, and growth systems helped their business move faster.</p>
                 </div>
@@ -334,7 +367,7 @@
                 </div>
                 <button class="slider-btn" data-direction="next" aria-label="Next testimonial">&#8594;</button>
             </div>
-            <div class="slider-dots" role="tablist">
+            <div class="slider-dots" role="tablist" data-scroll="fade-up" data-delay="0.2s">
                 <button class="dot is-active" aria-label="Show testimonial 1" data-index="0"></button>
                 <button class="dot" aria-label="Show testimonial 2" data-index="1"></button>
                 <button class="dot" aria-label="Show testimonial 3" data-index="2"></button>
@@ -345,48 +378,109 @@
         </section>
 
         <section class="insights" id="insights">
-            <div class="section-heading">
+            <div class="section-heading" data-scroll="section-title">
                 <p class="eyebrow">Featured Insights</p>
                 <h2>Ideas powering our next campaigns.</h2>
             </div>
             <div class="insights-grid">
-                <article>
-                    <p class="tag">Strategy</p>
+                <article class="insight-card insight-card-strategy" data-scroll="insight-float">
+                    <div class="insight-meta">
+                        <p class="tag">Strategy</p>
+                        <span class="insight-index">01</span>
+                    </div>
                     <h3>Designing demand engines around dark social.</h3>
                     <p>How community-led media buys are surfacing intent 3x faster than traditional funnels.</p>
-                    <a href="#">Read the breakdown &rarr;</a>
+                    <div class="insight-visual" aria-hidden="true">
+                        <span class="insight-visual-grid"></span>
+                        <span class="insight-bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="insight-line"></span>
+                        <span class="insight-scan"></span>
+                    </div>
+                    <a href="#" class="insight-link">Read the breakdown <span>&rarr;</span></a>
                 </article>
-                <article>
-                    <p class="tag">Creative</p>
+                <article class="insight-card insight-card-creative" data-scroll="insight-rotate" data-delay="0.08s">
+                    <div class="insight-meta">
+                        <p class="tag">Creative</p>
+                        <span class="insight-index">02</span>
+                    </div>
                     <h3>3D-first content for product-led brands.</h3>
                     <p>Subtle cinematic moves and spatial audio cues to keep viewers watching past the hook.</p>
-                    <a href="#">See the playbook &rarr;</a>
+                    <div class="insight-visual" aria-hidden="true">
+                        <span class="insight-visual-grid"></span>
+                        <span class="insight-bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="insight-line"></span>
+                        <span class="insight-scan"></span>
+                    </div>
+                    <a href="#" class="insight-link">See the playbook <span>&rarr;</span></a>
                 </article>
-                <article>
-                    <p class="tag">SEO</p>
+                <article class="insight-card insight-card-seo" data-scroll="insight-float" data-delay="0.16s">
+                    <div class="insight-meta">
+                        <p class="tag">SEO</p>
+                        <span class="insight-index">03</span>
+                    </div>
                     <h3>Owning local search with trust signals.</h3>
                     <p>Schema layering, review ops, and neighborhood-specific landing pages that convert.</p>
-                    <a href="#">Learn the signals &rarr;</a>
+                    <div class="insight-visual" aria-hidden="true">
+                        <span class="insight-visual-grid"></span>
+                        <span class="insight-bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="insight-line"></span>
+                        <span class="insight-scan"></span>
+                    </div>
+                    <a href="#" class="insight-link">Learn the signals <span>&rarr;</span></a>
                 </article>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <div class="section-heading contact-heading">
+            <div class="section-heading contact-heading" data-scroll="section-title">
                 <p class="eyebrow">Let's Build</p>
                 <h2>Ready to turn attention into <span class="contact-brand-accent">real growth</span>?</h2>
             </div>
             <div class="contact-shell">
-                <div class="contact-brand">
-                    <img src="assets/rg-strip.png" alt="RG MediaCreates logo" class="contact-mark">
-                    <p class="contact-copy">RG MediaCreates builds cinematic creative, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and convert better.</p>
+                <div class="contact-brand" data-scroll="slide-left">
+                    <p class="contact-brand-kicker">Creative Growth Partner</p>
+                    <img src="assets/rg-header-logo.png" alt="RG MediaCreates logo" class="contact-mark">
+                    <p class="contact-copy">
+                        RG MediaCreates builds <span>cinematic creative</span>, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and <span>convert better</span>.
+                    </p>
                     <div class="contact-socials" aria-label="Social links">
-                        <a href="#" aria-label="Instagram">IG</a>
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram" class="social-link social-link-instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="4.5" y="4.5" width="15" height="15" rx="4"></rect>
+                                <circle cx="12" cy="12" r="3.6"></circle>
+                                <circle cx="17.2" cy="6.8" r="1.05" class="social-dot"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link social-link-linkedin">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="4.4" y="8.8" width="3.1" height="10.2" rx="1"></rect>
+                                <circle cx="5.95" cy="5.9" r="1.55"></circle>
+                                <path d="M10.3 8.8h3v1.45c.68-1.06 1.95-1.8 3.76-1.8 3.15 0 4.51 2.02 4.51 5.34V19h-3.24v-4.63c0-1.92-.68-3.02-2.26-3.02-1.72 0-2.76 1.16-2.76 3.02V19H10.3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link social-link-facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.4 20v-7.03h2.38l.36-2.75H13.4V8.46c0-.8.22-1.34 1.37-1.34h1.46V4.66c-.25-.03-1.1-.11-2.09-.11-2.06 0-3.47 1.26-3.47 3.57v2.1H8.33v2.75h2.34V20z"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-links">
+                <div class="contact-links" data-scroll="fade-up" data-delay="0.08s">
                     <p class="contact-links-title">Quick Links</p>
                     <a href="#about">About Us</a>
                     <a href="#services">Services</a>
@@ -395,7 +489,7 @@
                     <a href="#testimonials">Testimonials</a>
                     <a href="#contact">Contact Us</a>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" data-scroll="slide-right" data-delay="0.14s">
                     <label class="contact-field contact-field-full">
                         <span>Name</span>
                         <input type="text" placeholder="Name" required>
