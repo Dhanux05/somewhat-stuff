@@ -1,6 +1,57 @@
 document.documentElement.classList.add('js');
+document.body?.classList.add('intro-active');
 
 document.addEventListener('DOMContentLoaded', () => {
+    const introSplash = document.querySelector('.intro-splash');
+    const introControlledMedia = [...document.querySelectorAll('.hero-video, .hero-video-mobile, .about-video')];
+    const isMediaVisible = media => {
+        const styles = window.getComputedStyle(media);
+        const rect = media.getBoundingClientRect();
+        return styles.display !== 'none' && styles.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
+    };
+    const syncIntroMediaPlayback = () => {
+        introControlledMedia.forEach(media => {
+            if (!isMediaVisible(media) || document.hidden) {
+                media.pause();
+                return;
+            }
+
+            if (media.readyState < 3) {
+                media.load();
+            }
+
+            const playPromise = media.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {});
+            }
+        });
+    };
+    const hideIntro = () => {
+        if (!introSplash) {
+            document.body.classList.remove('intro-active');
+            syncIntroMediaPlayback();
+            return;
+        }
+
+        introSplash.classList.add('is-hidden');
+        document.body.classList.remove('intro-active');
+        syncIntroMediaPlayback();
+        window.setTimeout(() => introSplash.remove(), 900);
+    };
+
+    if (introSplash) {
+        introControlledMedia.forEach(media => media.pause());
+    } else {
+        syncIntroMediaPlayback();
+    }
+
+    if (introSplash) {
+        window.setTimeout(hideIntro, 2100);
+    }
+
+    window.addEventListener('resize', syncIntroMediaPlayback);
+    document.addEventListener('visibilitychange', syncIntroMediaPlayback);
+
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();

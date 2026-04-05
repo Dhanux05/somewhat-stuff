@@ -12,6 +12,20 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="intro-splash" aria-hidden="true">
+        <div class="intro-splash__core">
+            <span class="intro-splash__ring intro-splash__ring--one"></span>
+            <span class="intro-splash__ring intro-splash__ring--two"></span>
+            <span class="intro-splash__flare"></span>
+            <span class="intro-splash__trail"></span>
+            <img class="intro-splash__logo" src="assets/rg-header-logo.png" alt="RG MediaCreates logo">
+            <p class="intro-splash__title" aria-label="RG MediaCreates">
+                <span>RG</span>
+                <span>Media</span>
+                <span>Creates</span>
+            </p>
+        </div>
+    </div>
     <div class="site-background" aria-hidden="true">
         <span class="site-background__mesh"></span>
         <span class="site-background__orb site-background__orb--one"></span>
@@ -88,8 +102,11 @@
 
     <main>
         <section class="hero" id="home">
-            <video class="hero-video" autoplay muted loop playsinline>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto">
                 <source src="assets/hero-logo-reveal.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video hero-video-mobile" autoplay muted loop playsinline preload="auto">
+                <source src="assets/about-visual.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay" aria-hidden="true"></div>
             <div class="hero-content" data-scroll="hero">
@@ -125,7 +142,7 @@
                     <p class="about-body">RG MediaCreates is a full-service digital marketing and media agency dedicated to driving global growth. We don't just provide services; we build digital success stories. From stunning visuals to high-impact campaigns, we create content that connects and converts.</p>
                 </div>
                 <div class="about-visual reveal-right" data-scroll="zoom-right" data-delay="0.12s">
-                    <video class="about-video" src="assets/about-visual.mp4" autoplay muted loop playsinline></video>
+                    <video class="about-video" src="assets/about-visual.mp4" autoplay muted loop playsinline preload="metadata"></video>
                 </div>
             </div>
         </section>
@@ -486,21 +503,21 @@
                     </div>
                     <p class="contact-copy">RG MediaCreates builds <span>cinematic creative</span>, high-performance campaigns, polished websites, and local visibility systems that help ambitious brands move faster and <span>convert better</span>.</p>
                     <div class="contact-socials" aria-label="Social links">
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://www.instagram.com/rg_mediacreates?igsh=cG93ODl5bWxqY3Bz&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <rect x="4.5" y="4.5" width="15" height="15" rx="4"></rect>
                                 <circle cx="12" cy="12" r="3.6"></circle>
                                 <circle cx="17.2" cy="6.8" r="1.05" class="social-dot"></circle>
                             </svg>
                         </a>
-                        <a href="#" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/rg-mediacreates-b6a9113a0?utm_source=share_via&utm_content=profile&utm_medium=member_ios" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <rect x="4.4" y="8.8" width="3.1" height="10.2" rx="1"></rect>
                                 <circle cx="5.95" cy="5.9" r="1.55"></circle>
                                 <path d="M10.3 8.8h3v1.45c.68-1.06 1.95-1.8 3.76-1.8 3.15 0 4.51 2.02 4.51 5.34V19h-3.24v-4.63c0-1.92-.68-3.02-2.26-3.02-1.72 0-2.76 1.16-2.76 3.02V19H10.3z"></path>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61577532188316" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M13.4 20v-7.03h2.38l.36-2.75H13.4V8.46c0-.8.22-1.34 1.37-1.34h1.46V4.66c-.25-.03-1.1-.11-2.09-.11-2.06 0-3.47 1.26-3.47 3.57v2.1H8.33v2.75h2.34V20z"></path>
                             </svg>
