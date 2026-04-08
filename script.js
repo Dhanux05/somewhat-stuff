@@ -242,6 +242,35 @@ document.addEventListener('DOMContentLoaded', () => {
         element.addEventListener('pointerleave', reset);
     };
 
+    const addMagneticHover = (element, options = {}) => {
+        if (!supportsHover || !element) return;
+
+        const {
+            strengthX = 8,
+            strengthY = 8
+        } = options;
+
+        const reset = () => {
+            element.style.setProperty('--mx', '0px');
+            element.style.setProperty('--my', '0px');
+        };
+
+        reset();
+
+        element.addEventListener('pointermove', event => {
+            const rect = element.getBoundingClientRect();
+            const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+            const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+            const moveX = offsetX * strengthX * 2;
+            const moveY = offsetY * strengthY * 2;
+
+            element.style.setProperty('--mx', `${moveX.toFixed(2)}px`);
+            element.style.setProperty('--my', `${moveY.toFixed(2)}px`);
+        });
+
+        element.addEventListener('pointerleave', reset);
+    };
+
     if (supportsHover) {
         const reactiveElements = document.querySelectorAll([
             '.about-panels article',
@@ -260,6 +289,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 lift: 4
             });
         });
+
+        const generalMagneticElements = document.querySelectorAll([
+            '.contact-mark-shell',
+            '.contact-socials a'
+        ].join(', '));
+
+        generalMagneticElements.forEach(element => {
+            addMagneticHover(element, {
+                strengthX: 5,
+                strengthY: 4
+            });
+        });
+
     }
 
     const whyCards = document.querySelectorAll('.why .glass');
