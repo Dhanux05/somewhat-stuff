@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const insightCards = document.querySelectorAll('.insight-card');
     if (insightCards.length) {
+        const isTouchPointer = window.matchMedia('(hover: none), (pointer: coarse)').matches;
         const revealInsightCard = card => {
             card.classList.add('is-animated');
         };
@@ -137,7 +138,34 @@ document.addEventListener('DOMContentLoaded', () => {
             rootMargin: '0px 0px -8% 0px'
         });
 
-        insightCards.forEach(card => insightObserver.observe(card));
+        insightCards.forEach(card => {
+            insightObserver.observe(card);
+
+            card.addEventListener('mousemove', event => {
+                const rect = card.getBoundingClientRect();
+                const x = ((event.clientX - rect.left) / rect.width) * 100;
+                const y = ((event.clientY - rect.top) / rect.height) * 100;
+                card.style.setProperty('--insight-spot-x', `${x.toFixed(2)}%`);
+                card.style.setProperty('--insight-spot-y', `${y.toFixed(2)}%`);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--insight-spot-x', '50%');
+                card.style.setProperty('--insight-spot-y', '50%');
+            });
+
+            if (isTouchPointer) {
+                card.addEventListener('click', event => {
+                    if (event.target.closest('a')) return;
+
+                    const currentlyFlipped = card.classList.contains('is-flipped');
+                    insightCards.forEach(item => item.classList.remove('is-flipped'));
+                    if (!currentlyFlipped) {
+                        card.classList.add('is-flipped');
+                    }
+                });
+            }
+        });
     }
 
     const comicNav = document.querySelector('.comic-radio-group');
